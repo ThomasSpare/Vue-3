@@ -4,16 +4,38 @@
     <meta charset="UTF-8" />
     <title>Vue Mastery</title>
     <!-- Import Styles -->
-    <link rel="stylesheet" href="./assets/styles.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
     <!-- Import Vue.js -->
-    <script src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
   </head>
   <body>
     <div id="app">
-      <h1>Product goes here</h1>
-    </div>
-
-    <!-- Import Js -->
-    <script src="./main.js"></script>
-  </body>
-</html>
+      <div class="nav-bar">
+      <div class="product-display">
+          <div class="product-container">
+            <div class="product-image">
+            </div>
+            <img
+            v-bind:src="image"
+            alt="socks"
+            />
+          </div>
+            <div class="product-info">
+              <h1>{{ product }}</h1>
+              <!-- solution -->
+              <a :href="url">Made by Vue Mastery</a>
+             <!-- solution -->
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Import App -->
+      <script src="./main.js"></script>
+  
+      <!-- Mount App -->
+      <script>
+        const mountedApp = app.mount('#app')
+      </script>
+    </body>
+  </html>
